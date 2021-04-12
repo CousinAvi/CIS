@@ -53,7 +53,7 @@ def anketa_zotov(request):
 
 
 def download_file(request):
-   the_file = "C:\\Users\\ILYA\\Downloads\\task_8.7z"
+   the_file = "C:\\Users\\ILYA\\Downloads\\task_8.zip"
    filename = os.path.basename(the_file)
    chunk_size = 8192
    response = StreamingHttpResponse(FileWrapper(open(the_file, 'rb'), chunk_size),
