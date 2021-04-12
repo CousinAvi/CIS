@@ -1,0 +1,257 @@
+<!DOCTYPE HTML>
+{% load static %}
+<html>
+	<head>
+		<title>База безопасников</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="{% static 'assets/css/main.css' %}" />
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+	<script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+  <script src='https://api.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.js'></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	</head>
+	<body>
+
+		<nav class="navbar navbar-expand-xl navbar-light bg-dark sticky-top border-bottom shadow-sm mb-4">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-toggle="collapse"
+      data-target="#navbarResponsive">
+        <span class="navbar-toggler-icon">
+          <i class="fas fa-bars" style="color:#fff; font-size:28px;"></i>
+        </span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+
+        <ul class="navbar-nav mr-auto">
+
+          <li class="nav-item active">
+            <a href="{% url 'landing' %}" class="nav-link text-center text-white">Главная</a>
+          </li>
+          <li class="nav-item active">
+            <a href="{% url 'news' %}" class="nav-link text-center text-white">Новости</a>
+          </li>
+					<li class="nav-item active text-center">
+						<div class="sidebar">
+							<div class="dropdown show">
+							<a class="btn btn-secondary dropdown-toggle bg-dark border-0" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="margin-top :2px">Образование</a>
+
+							<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+								<a class="dropdown-item" href="#">Высшее образование</a>
+								<a class="dropdown-item" href="#">Дополнительное образование</a>
+
+							</div>
+							</div>
+						</div>
+			</li>
+				<li class="nav-item active">
+					<a href="{% url 'events' %}" class="nav-link text-center text-white">Мероприятия</a>
+				</li>
+					<li class="nav-item active">
+            <a href="{% url 'search' %}" class="nav-link text-center text-white">Вакансии</a>
+          </li>
+					<li class="nav-item active">
+            <a href="{% url 'projects' %}" class="nav-link text-center text-white">Наши проекты</a>
+          </li>
+					<li class="nav-item active">
+            <a href="{% url 'feedback' %}" class="nav-link text-center text-white">Обратная связь</a>
+          </li>
+
+
+        </ul>
+      </div>
+    </nav>
+		<!-- Баннер -->
+
+			<section id="banner" data-video="{% static 'images/vid4' %}">
+				<div class="inner">
+					<h1>Центр информационной безопасности&nbsp;</h1>
+					<p>Мы готовим кадры для вас.</p>
+					<a href="#one" class="button btn btn-outline-dark scrolly text-white">Подробнее</a>
+				</div>
+			</section>
+
+		<!-- Описание -->
+			<section id="one" class="wrapper style2">
+				<div class="inner">
+					<div class="">
+							<div class="image fit">
+								<img src="{% static 'images/pic5.jpg' %}" alt="" />
+							</div>
+							<div class="boxfoot">
+
+
+							<div class="content">
+								<header class="align-left">
+									<h4>Центр информационной безопасности ДВФУ</h4>
+									<p>Лекции. Курсы. Повышения квалификации. Разработка ПО.</p>
+									<p> Основан в 2019 году на базе Дальневосточного федерального университета. The BEST of the BEST </p>
+									<p>Тут описание поиска резюме и приемщества перед hh или фарпостом, поиск по образовательным компетенциям.</p>
+								</header>
+								</div>
+						</div>
+					</div>
+				</div>
+			</section>
+<!-- Описание вакансий -->
+<div class="container mt-4">
+<h4 class="mb-4">Новости</h4>
+<div class="row">
+	<div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-4">
+
+		<!-- Card -->
+		<a class="card border-0 mb-4" href="{% url 'news_first' %}">
+
+			<!-- Image -->
+			<img class="card-img-top " src="{% static 'images/it.jpg' %}" alt="...">
+
+
+
+			<!-- Body -->
+			<div class="card-body">
+	    <h6 class="card-title text-dark"><span class="colortext-green text-white">ЛЕКЦИИ</span>27 апреля 2019</h6>
+	    <p class="card-text text-dark">Провели лекцию</p>
+  	</div>
+
+
+	</a>
+	</div>
+
+	<div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-4">
+
+		<!-- Card -->
+		<a class="card border-0 mb-4" href="{% url '' %}">
+
+			<!-- Image -->
+			<img class="card-img-top " src="{% static 'images/it.jpg' %}" alt="...">
+
+
+
+			<!-- Body -->
+			<div class="card-body">
+	    <h6 class="card-title text-dark"><span class="colortext-red text-white">КУРСЫ</span>27 апреля 2019</h6>
+	    <p class="card-text text-dark">Открыт набор на курсы</p>
+  	</div>
+
+
+	</a>
+	</div>
+
+	<div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-4">
+
+		<!-- Card -->
+		<a class="card border-0 mb-4" href="{% url '' %}">
+
+			<!-- Image -->
+			<img class="card-img-top " src="{% static 'images/it.jpg' %}" alt="...">
+
+
+
+			<!-- Body -->
+			<div class="card-body">
+	    <h6 class="card-title text-dark"><span class="colortext-blue text-white">РАБОТА</span>27 апреля 2019</h6>
+	    <p class="card-text text-dark">Вакансия на должность</p>
+  	</div>
+
+
+	</a>
+	</div>
+	<div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-4">
+
+		<!-- Card -->
+		<a class="card border-0 mb-4" href="{% url '' %}">
+
+			<!-- Image -->
+			<img class="card-img-top " src="{% static 'images/it.jpg' %}" alt="...">
+
+
+
+			<!-- Body -->
+			<div class="card-body">
+	    <h6 class="card-title text-dark"><span class="colortext-red text-white">КУРСЫ</span>27 апреля 2019</h6>
+	    <p class="card-text text-dark">Открыт набор на курсы</p>
+  	</div>
+
+
+	</a>
+	</div>
+</div>
+<h4 class="mb-4">Мероприятия</h4>
+<div class="row">
+	<div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-4">
+
+		<!-- Card -->
+		<a class="card border-0 mb-4" href="{% url '' %}">
+
+			<!-- Image -->
+			<img class="card-img-top " src="{% static 'images/it.jpg' %}" alt="...">
+
+
+
+			<!-- Body -->
+			<div class="card-body">
+	    <h6 class="card-title text-dark"><span class="colortext-blue text-white">ВОРК</span>27 апреля 2019</h6>
+	    <p class="card-text text-dark">Вакансии для специалистов</p>
+  	</div>
+
+
+	</a>
+	</div>
+
+	<div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-4">
+
+		<!-- Card -->
+		<a class="card border-0 mb-4" href="{% url '' %}">
+
+			<!-- Image -->
+			<img class="card-img-top " src="{% static 'images/it.jpg' %}" alt="...">
+
+
+
+			<!-- Body -->
+			<div class="card-body">
+	    <h6 class="card-title text-dark"><span class="colortext-yellow text-white">ЛЕКЦИИ</span>27 апреля 2019</h6>
+	    <p class="card-text text-dark">Лекции от ЦИБ ДВФУ</p>
+  	</div>
+
+
+	</a>
+	</div>
+	<div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-4">
+
+		<!-- Card -->
+		<a class="card border-0 mb-4" href="{% url '' %}">
+
+			<!-- Image -->
+			<img class="card-img-top " src="{% static 'images/it.jpg' %}" alt="...">
+
+
+
+			<!-- Body -->
+			<div class="card-body">
+	    <h6 class="card-title text-dark"><span class="colortext-violet text-white">CTF</span>27 апреля 2019</h6>
+	    <p class="card-text text-dark">Соревнования в области ИБ</p>
+  	</div>
+
+
+	</a>
+	</div>
+</div>
+</div>
+</div>
+
+
+
+		<!-- Scripts -->
+			<script src="{% static 'assets/js/jquery.min.js' %}"></script>
+			<script src="{% static 'assets/js/jquery.scrolly.min.js' %}"></script>
+			<script src="{% static 'assets/js/jquery.scrollex.min.js' %}"></script>
+			<script src="{% static 'assets/js/skel.min.js' %}"></script>
+			<script src="{% static 'assets/js/util.js' %}"></script>
+			<script src="{% static 'assets/js/main.js' %}"></script>
+
+	</body>
+</html>

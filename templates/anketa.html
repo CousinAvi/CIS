@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+{% load static %}
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
+<!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->
+<head>
+    <title>Резюме</title>
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Responsive HTML5 Resume/CV Template for Developers">
+    <meta name="author" content="Xiaoying Riley at 3rd Wave Media">
+    <link rel="shortcut icon" href="favicon.ico">
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,500,400italic,300italic,300,500italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+    <!-- Global CSS -->
+    <link rel="stylesheet" href="{% static 'assets/plugins/bootstrap/css/bootstrap.min.css' %}">
+    <!-- Plugins CSS -->
+    <link rel="stylesheet" href="{% static 'assets/plugins/font-awesome/css/font-awesome.css' %}">
+
+    <!-- Theme CSS -->
+    <link id="theme-style" rel="stylesheet" href="{% static 'assets/css/styles.css' %}">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="sidebar-wrapper">
+            <div class="profile-container">
+                <img class="profile" src="{% static 'assets/images/profile.png' %}" alt="" />
+                <h1 class="name">Зотов Сергей</h1>
+                <h3 class="tagline">Специалист в области кибербезопасности</h3>
+            </div><!--//profile-container-->
+
+            <div class="contact-container container-block">
+                <ul class="list-unstyled contact-list">
+                    <li class="email"><i class="fa fa-envelope"></i><a href="mailto: yourname@email.com">zotov.ss@inbox.ru</a></li>
+                    <li class="phone"><i class="fa fa-phone"></i><a href="tel:0123 456 789">123 456 789</a></li>
+                    <li class="website"><i class="fa fa-globe"></i><a href="http://themes.3rdwavemedia.com/website-templates/free-responsive-website-template-for-developers/" target="_blank">dvfu.ru</a></li>
+                    <li class="linkedin"><i class="fa fa-linkedin"></i><a href="#" target="_blank">linkedin.com/</a></li>
+                    <li class="github"><i class="fa fa-github"></i><a href="#" target="_blank">github.com/Deckardio</a></li>
+                    <li class="twitter"><i class="fa fa-twitter"></i><a href="https://twitter.com/3rdwave_themes" target="_blank">@SergeZcom</a></li>
+                </ul>
+            </div><!--//contact-container-->
+            <div class="education-container container-block">
+                <h2 class="container-block-title">Образование</h2>
+                <div class="item">
+                    <h4 class="degree">Прикладная информатика в экономике. Специалитет</h4>
+                    <h5 class="meta">ДВГУ-ДВФУ</h5>
+                    <div class="time">2008 - 2014</div>
+                </div><!--//item-->
+                <div class="item">
+                    <h4 class="degree">Прикладная информатика. Магистратура</h4>
+                    <h5 class="meta">ДВФУ</h5>
+                    <div class="time">20014 - 2016</div>
+                </div><!--//item-->
+				    <div class="item">
+                    <h4 class="degree">Аспирантура. Computer Science</h4>
+                    <h5 class="meta">ДВФУ</h5>
+                    <div class="time">2016 - 2020</div>
+                </div><!--//item-->
+            </div><!--//education-container-->
+
+            <div class="languages-container container-block">
+                <h2 class="container-block-title">Языки</h2>
+                <ul class="list-unstyled interests-list">
+                    <li>Русский <span class="lang-desc">(Native)</span></li>
+                    <li>Английский <span class="lang-desc">(Professional)</span></li>
+                </ul>
+            </div><!--//interests-->
+
+            <div class="interests-container container-block">
+                <h2 class="container-block-title">Интересы</h2>
+                <ul class="list-unstyled interests-list">
+                    <li>Программирование</li>
+                    <li>Видеосъемка</li>
+                    <li>Музыка</li>
+                </ul>
+            </div><!--//interests-->
+
+        </div><!--//sidebar-wrapper-->
+
+        <div class="main-wrapper">
+
+            <section class="section summary-section">
+                <h2 class="section-title"><i class="fa fa-user"></i>Образование</h2>
+                <div class="summary">
+                    <p>Полный список дисциплин можно посмотреть по <a href="#" target="_blank">ссылке</a>.</p>
+                </div><!--//summary-->
+            </section><!--//section-->
+
+            <section class="section experiences-section">
+                <h2 class="section-title"><i class="fa fa-briefcase"></i>Опыт работы</h2>
+
+				                <div class="item">
+                    <div class="meta">
+                        <div class="upper-row">
+                            <h3 class="job-title">Преподаватель</h3>
+                            <div class="time">2016 - Настоящее время</div>
+                        </div><!--//upper-row-->
+                        <div class="company">ДВФУ</div>
+                    </div><!--//meta-->
+                    <div class="details">
+                        <p>Чтение лекций</p>
+                    </div><!--//details-->
+                </div><!--//item-->
+                <div class="item">
+                    <div class="meta">
+                        <div class="upper-row">
+                            <h3 class="job-title">Заведующий лабораторией</h3>
+                            <div class="time">2016 - Настоящее время</div>
+                        </div><!--//upper-row-->
+                        <div class="company">ДВФУ</div>
+                    </div><!--//meta-->
+                    <div class="details">
+                        <p>Исследовательская деятельность</p>
+                    </div><!--//details-->
+                </div><!--//item-->
+
+                <div class="item">
+                    <div class="meta">
+                        <div class="upper-row">
+                            <h3 class="job-title">Фриланс. Пентестер</h3>
+                            <div class="time">2015 - 2016</div>
+                        </div><!--//upper-row-->
+                        <div class="company">Самозанятый</div>
+                    </div><!--//meta-->
+                    <div class="details">
+                        <p>Тестирование безопасности сайтов и серверов</p>
+
+                    </div><!--//details-->
+                </div><!--//item-->
+
+                <div class="item">
+                    <div class="meta">
+                        <div class="upper-row">
+                            <h3 class="job-title">Программист</h3>
+                            <div class="time">2015 - 2015</div>
+                        </div><!--//upper-row-->
+                        <div class="company">ООО "Кейсистемс-Владивосток"</div>
+                    </div><!--//meta-->
+                    <div class="details">
+                        <p>Разработка ПО в области информационной безопасности</p>
+                    </div><!--//details-->
+                </div><!--//item-->
+
+            </section><!--//section-->
+
+            <section class="section projects-section">
+                <h2 class="section-title"><i class="fa fa-archive"></i>Проекты</h2>
+                <div class="intro">
+                    <p>Краткое описание блока с проектами</p>
+                </div><!--//intro-->
+                <div class="item">
+                    <span class="project-title"><a href="#hook">Маркеровщик</a></span> - <span class="project-tagline">Скрытая маркеровка документов</span>
+
+                </div><!--//item-->
+                <div class="item">
+                    <span class="project-title"><a href="#hook" target="_blank">WAF</a></span> -
+                    <span class="project-tagline">Детектор APT атак </span>
+                </div><!--//item-->
+                <div class="item">
+                    <span class="project-title"><a href="#hook" target="_blank">Криптокрякен</a></span> - <span class="project-tagline">Система проверки данных на утечки</span>
+                </div><!--//item-->
+
+            </section><!--//section-->
+
+            <section class="skills-section section">
+                <h2 class="section-title"><i class="fa fa-rocket"></i>Технологический стек</h2>
+                <div class="skillset">
+                    <div class="item">
+                        <h3 class="level-title">Python &amp; Django</h3>
+                        <div class="level-bar">
+                            <div class="level-bar-inner" data-level="98%">
+                            </div>
+                        </div><!--//level-bar-->
+                    </div><!--//item-->
+
+                    <div class="item">
+                        <h3 class="level-title">Javascript &amp; jQuery</h3>
+                        <div class="level-bar">
+                            <div class="level-bar-inner" data-level="58%">
+                            </div>
+                        </div><!--//level-bar-->
+                    </div><!--//item-->
+
+                    <div class="item">
+                        <h3 class="level-title">Keras</h3>
+                        <div class="level-bar">
+                            <div class="level-bar-inner" data-level="98%">
+                            </div>
+                        </div><!--//level-bar-->
+                    </div><!--//item-->
+
+                    <div class="item">
+                        <h3 class="level-title">HTML5 &amp; CSS</h3>
+                        <div class="level-bar">
+                            <div class="level-bar-inner" data-level="55%">
+                            </div>
+                        </div><!--//level-bar-->
+                    </div><!--//item-->
+
+                    <div class="item">
+                        <h3 class="level-title">Reverse</h3>
+                        <div class="level-bar">
+                            <div class="level-bar-inner" data-level="75%">
+                            </div>
+                        </div><!--//level-bar-->
+                    </div><!--//item-->
+
+                    <div class="item">
+                        <h3 class="level-title">Photoshop</h3>
+                        <div class="level-bar">
+                            <div class="level-bar-inner" data-level="70%">
+                            </div>
+                        </div><!--//level-bar-->
+                    </div><!--//item-->
+
+                </div>
+            </section><!--//skills-section-->
+
+        </div><!--//main-body-->
+    </div>
+
+
+
+    <!-- Javascript -->
+    <script type="text/javascript" src="{% static 'assets/plugins/jquery-1.11.3.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'assets/plugins/bootstrap/js/bootstrap.min.js' %}"></script>
+    <!-- custom js -->
+    <script type="text/javascript" src="{% static 'assets/js/main.js' %}"></script>
+</body>
+</html>

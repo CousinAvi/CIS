@@ -1,0 +1,72 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+
+
+<!-- Описание вакансий -->
+<div class="container mt-4">
+<h4 class="mb-4">Лекция по информационной безопасности</h4>
+<div class="row">
+  <div class="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8">
+
+		<!-- Card -->
+		<div class="border-0 mb-4" href="{% url '' %}">
+
+			<!-- Image -->
+			<img class="img-fluid" src="{% static 'images/it.jpg' %}" alt="...">
+
+
+
+			<!-- Body -->
+			<div class="card-body">
+	    <h6 class="card-title text-dark"><span class="colortext-green text-white">ЛЕКЦИИ</span>27 апреля 2019</h6>
+
+
+
+
+  	</div>
+
+
+	</div>
+	</div>
+
+  <div class="col-12 col-sm-12 col-md-12 col-lg-11 col-xl-12">
+
+		<p class="text-dark">Команда Дальневосточного федерального университета (ДВФУ) выиграла в студенческом турнире Russkiy Island Hackers по информационной безопасности в формате CTF (Capture The Flag). Молодые хакеры соревновались во взломе и защите информационных систем и сайтов, восстановлении данных, компьютерной криминалистике и криптоанализе — на скорость решали задачи, с которыми ежедневно сталкиваются специалисты по информационной безопасности.
+
+Абсолютными победителями турнира стали студенты программы «Информационная безопасность» Школы естественных наук (ШЕН) ДВФУ Егор Новиков, Николай Ступин, Валентин Медведев (IBM-DCP). Второе место заняла команда Baklazhanchiki Морского государственного университета имени адмирала Г.И. Невельского: Константин Шевяхов, Арина Пафнутьева. «Бронза» досталась еще одной сборной студентов ШЕН ДВФУ LES: Эдуард Воробьев, Сергей Дубовой, Сергей Корнеенко.
+
+Как отметил заведующий лабораторией кафедры информационной безопасности ШЕН ДВФУ Сергей Зотов, хакерские состязания в формате CTF широко распространены в IT-сообществе и привлекают все больше молодых специалистов.</p>
+
+  </div>
+
+
+
+
+
+
+
+</div>
+<div class="carousel slide mb-5" data-ride = "carousel" id="slides">
+	<ul class="carousel-indicators">
+		<li data-target="#slides" data-slide-to="0" class="active"></li>
+		<li data-target="#slides" data-slide-to="1"></li>
+		<li data-target="#slides" data-slide-to="2"></li>
+
+	</ul>
+
+	<div class="carousel-inner">
+		<div class="carousel-item active">
+			<a><img class="img-fluid" src="{% static 'images/it.jpg' %}" alt=""></a>
+		</div>
+		<div class="carousel-item">
+			<img class="img-fluid" src="{% static 'images/it.jpg' %}" alt="">
+		</div>
+		<div class="carousel-item">
+			<img class="img-fluid" src="{% static 'images/it.jpg' %}" alt="">
+		</div>
+	</div>
+	</div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,79 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+
+<!-- Описание вакансий -->
+<div class="container-fluid">
+	<div class="col-10 offset-1">
+<h4 class="mb-4">Высшее образование</h4>
+<table class="table table-responsive" width="100%">
+<thead>
+	<tr>
+		<th scope="col text-center">№</th>
+		<th scope="col text-center">Наименование программы</th>
+		<th scope="col text-center">Срок обучения</th>
+		<th scope="col text-center">Стоимость</th>
+	</tr>
+</thead>
+<tbody>
+            <tr>
+              <td class="col1">1</td>
+              <td class="col2"><a class="text-dark" href="{% url 'load' %}">Магистратура "Конфиденциальность финансовых систем (КФС)"</a></td>
+              <td class="col3">2 года</td>
+              <td class="col4">100000р.</td>
+            </tr>
+
+
+</tbody>
+</table>
+
+</div>
+</div>
+<div class="container-fluid">
+<div class="col-10 offset-1">
+	<h4 class="mt-5 mb-4">ДПО</h4>
+<table class="table table-responsive">
+<thead>
+	<tr>
+		<th scope="col text-center">№</th>
+		<th scope="col text-center">Наименование программы</th>
+		<th scope="col text-center">Количество часов</th>
+		<th scope="col text-center">Стоимость</th>
+	</tr>
+</thead>
+<tbody>
+
+            <tr>
+              <td>1</td>
+              <td><a class="text-dark" href="{% url 'load' %}">Техническая защита информации. Организация защиты информации ограниченного доступа,содержащей сведения, составляющие государственную тайну.</a></td>
+              <td>128ч.</td>
+              <td>100000р.</td>
+            </tr>
+						<tr>
+              <td>2</td>
+              <td><a class="text-dark" href="{% url 'load' %}">Обеспечение безопасности персональных данных при их обработке в информационных системах персональных данных.</a></td>
+              <td>256ч.</td>
+              <td></td>
+            </tr>
+						<tr>
+              <td>3</td>
+              <td><a class="text-dark" href="{% url 'load' %}">Техническая защита информации ограниченного доступа, не содержащей сведения, составляющие государственную тайну.</a></td>
+              <td>128ч.</td>
+              <td></td>
+            </tr>
+						<tr>
+              <td>4</td>
+              <td><a class="text-dark" href="{% url 'load' %}">Техническая защита информации. Организация защиты информации ограниченного доступа, не содержащей сведения, составляющие государственную тайну.</a></td>
+              <td>172ч.</td>
+              <td></td>
+            </tr>
+
+</tbody>
+</table>
+</div>
+</div>
+
+
+
+
+{% endblock %}

@@ -1,0 +1,468 @@
+<!DOCTYPE HTML>
+{% load static %}
+<html>
+	<head>
+		<title>База безопасников</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="{% static 'assets/css/main.css' %}" />
+		<link rel="stylesheet" href="{% static 'assets/css/paraia_multi_select.min.css' %}">
+			<link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+	<link rel="stylesheet" href="{% static 'assets/css/fm.revealator.jquery.css' %}">
+	<script src="{% static 'js/jquery-1.11.3.min.js' %}"></script>
+	<script src="{% static 'js/fm.revealator.jquery.js' %}"></script>
+
+		    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>jQuery Paraia Multi Select Plugin Example</title>
+<link href="https://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/4.0.0/flatly/bootstrap.min.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+	<script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+  <script src='https://api.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.js'></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <style>
+    body { background-color: #fafafa; font-family: 'Roboto';  }
+    .container { margin: 150px auto; }
+		</style>
+
+
+
+
+
+
+
+		<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: -3px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
+/* Center the image and position the close button */
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+  position: relative;
+}
+
+img.avatar {
+  width: 40%;
+  border-radius: 50%;
+}
+
+.container {
+  padding: 16px;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button (x) */
+.close {
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: red;
+  cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)}
+  to {-webkit-transform: scale(1)}
+}
+
+@keyframes animatezoom {
+  from {transform: scale(0)}
+  to {transform: scale(1)}
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+  .cancelbtn {
+     width: 100%;
+  }
+}
+</style>
+
+
+
+
+
+
+
+	</head>
+	<body>
+		<div class="">
+			<nav class="navbar navbar-expand-xl navbar-light bg-dark sticky-top border-bottom shadow-sm mb-4">
+	    <div class="container-fluid">
+	      <button class="navbar-toggler" type="button" data-toggle="collapse"
+	      data-target="#navbarResponsive">
+	        <span class="navbar-toggler-icon">
+	          <i class="fas fa-bars" style="color:#fff; font-size:28px;"></i>
+	        </span>
+	      </button>
+	      <div class="collapse navbar-collapse" id="navbarResponsive">
+
+	        <ul class="navbar-nav mr-auto">
+
+	          <li class="nav-item active">
+	            <a href="{% url 'landing' %}" class="nav-link text-center text-white">Главная</a>
+	          </li>
+	          <li class="nav-item active">
+	            <a href="{% url 'news' %}" class="nav-link text-center text-white">Новости</a>
+	          </li>
+						<li class="nav-item active">
+							<div class="sidebar">
+								<div class="dropdown show">
+								<a class="btn btn-secondary dropdown-toggle bg-dark border-0" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="margin-top :2px">Образование</a>
+
+								<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+									<a class="dropdown-item" href="#">Высшее образование</a>
+									<a class="dropdown-item" href="#">Дополнительное образование</a>
+
+								</div>
+								</div>
+							</div>
+				</li>
+					<li class="nav-item active">
+						<a href="{% url 'events' %}" class="nav-link text-center text-white">Мероприятия</a>
+					</li>
+						<li class="nav-item active">
+	            <a href="{% url 'search' %}" class="nav-link text-center text-white">Вакансии</a>
+	          </li>
+						<li class="nav-item active">
+	            <a href="{% url 'projects' %}" class="nav-link text-center text-white">Наши проекты</a>
+	          </li>
+						<li class="nav-item active">
+	            <a href="{% url 'feedback' %}" class="nav-link text-center text-white">Обратная связь</a>
+	          </li>
+
+
+	        </ul>
+	      </div>
+	    </nav>
+
+</div>
+		<!-- Поиск резюме -->
+			<footer id="footer" class="wrapper" style="background-image: url('/images/vid2.mp4');">
+				<div class="inner" >
+					<section>
+						<div class="box" >
+							<div class="content">
+								<h2 class="field">Поиск резюме</h2>
+								<hr />
+								<form action="#" method="post">
+
+									<div class="field">
+										<label for="dept">Должность</label>
+										<div class="select-wrapper">
+											<select name="dept" id="dept">
+												<option value="">- Выберите должность -</option>
+												<option value="1">Начальник отдела</option>
+												<option value="1">Ведущий специалист</option>
+												<option value="1">Специалист</option>
+												<option value="1">Техник</option>
+												<option value="1">Программист</option>
+												<option value="1">Тестировщик</option>
+												<option value="1">Реверс инженер</option>
+												<option value="1">Пентестер</option>
+											</select>
+										</div>
+									</div>
+											<div class="4u 12u$(small)">
+												<label for="message">Опыт работы</label><br>
+												<input type="radio" id="radio1" name="demo-priority" checked>
+												<label for="radio1">Не имеет значения</label>
+											</div>
+											<div class="4u 12u$(small)">
+												<input type="radio" id="radio2" name="demo-priority">
+												<label for="radio2">Нет опыта</label>
+											</div>
+											<div class="4u$ 12u$(small)">
+												<input type="radio" id="radio3" name="demo-priority">
+												<label for="radio3">От 1 года до 3 лет</label>
+											</div>
+											<div class="4u$ 12u$(small)">
+												<input type="radio" id="radio4" name="demo-priority">
+												<label for="radio4">От 3 до 5 лет</label>
+											</div>
+											<div class="4u$ 12u$(small)">
+												<input type="radio" id="radio5" name="demo-priority">
+												<label for="radio5">Более 5 лет</label>
+											</div>
+									<label for="message">Наличие сертификатов</label><br>
+									<div class="field half first">
+										<input type="checkbox" id="sert1" name="demo-copy">
+										<label for="sert1">Cisco CCNA Security</label>
+									</div>
+									<div class="field half">
+										<input type="checkbox" id="sert2" name="demo-copy">
+										<label for="sert2">Cisco CCNP Security</label>
+									</div>
+									<div  class="field half first">
+										<input type="checkbox" id="sert3" name="demo-copy">
+										<label for="sert3">Cisco CCDA</label>
+									</div>
+									<div class="field half">
+										<input type="checkbox" id="sert4" name="demo-copy">
+										<label for="sert4">Касперский</label>
+									</div>
+									<div class="field half first">
+										<input type="checkbox" id="sert5" name="demo-copy">
+										<label for="sert5">Infowatch</label>
+									</div>
+									<div class="field half">
+										<input type="checkbox" id="sert6" name="demo-copy">
+										<label for="sert6">Infotecs</label>
+									</div>
+									<div class="field half first">
+										<input type="checkbox" id="sert7" name="demo-copy">
+										<label for="sert7">CEH</label>
+									</div>
+									<div class="field half">
+										<input type="checkbox" id="sert8" name="demo-copy">
+										<label for="sert8">CAP</label>
+									</div>
+
+<label for="message">Компетенции</label><br>
+        <div class="col-12">
+            <br>
+            <input type="text" class="form-control"
+                   name="brands"
+                   data-paraia-multi-select="true"
+                   placeholder="Выберите компетенцию">
+            <br>
+
+        </div>
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="{% static 'dist/js/paraia_multi_select.min.js' %}"></script>
+<script>
+
+    $(document).ready(function () {
+
+        var items = [
+            {value: 11, text: 'Python'},
+            {value: 12, text: 'Криптография'},
+            {value: 13, text: 'С/С++'},
+            {value: 14, text: 'Машинное обучение'},
+            {value: 15, text: 'Пентест'},
+            {value: 16, text: 'Построение сетей'},
+            {value: 17, text: 'JS'},
+            {value: 18, text: 'IDA/Radar2'},
+            {value: 19, text: 'Английский'},
+            {value: 20, text: 'Системное администрирование'}
+        ];
+
+
+        var select = $('[data-paraia-multi-select="true"]').paraia_multi_select({
+            multi_select: true,
+            items: items,
+            defaults: [],
+            rtl: false
+        });
+
+
+        $('#show_selected').click(function () {
+
+        });
+    });
+</script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-36251023-1']);
+  _gaq.push(['_setDomainName', 'jqueryscript.net']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+
+
+
+
+
+								</form>
+							</div>
+
+
+
+
+
+
+
+
+
+<button onclick="document.getElementById('id01').style.display='block'" style="width:center;">Поиск</button>
+
+<div id="id01" class="modal">
+
+  <form class="modal-content animate" action="/action_page.php" method="post">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+    </div>
+					<div id="flexgrid">
+						<div>
+															<div class="image fit">
+
+									<img src="{% static 'images/zot.png' %}" alt="" height="150" width="250" />
+								</div>
+							<header>
+								<h3>Зотов Сергей</h3>
+							</header>
+							<p>Специалист по информационной безопасности</p>
+							<ul class="actions">
+								<li><a href="{% url 'anketa_zotov' %}" class="button alt">Перейти в анкету</a></li>
+							</ul>
+						</div>
+						<div>
+															<div class="image fit">
+
+									<img src="{% static 'images/bor.jpg' %}" alt="" height="150" width="250"/>
+								</div>
+							<header>
+								<h3>Боршевников Алексей</h3>
+							</header>
+							<p>Криптограф</p>
+							<ul class="actions">
+								<li><a href="#" class="button alt">Перейти в анкету</a></li>
+							</ul>
+						</div>
+						<div>
+															<div class="image fit">
+
+									<img src="{% static 'images/pav.png' %}" alt="" height="150" width="250" />
+								</div>
+							<header>
+								<h3>Павлычев Алексей</h3>
+							</header>
+							<p>Начальник отдела информационной безопасности</p>
+							<ul class="actions">
+								<li><a href="#" class="button alt">Перейти в анкету</a></li>
+							</ul>
+						</div>
+					</div>
+  </form>
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+						</div>
+					</section>
+
+				</div>
+			</footer>
+
+
+
+
+
+							<div class="copyright">
+						&copy; Зотов Сергей
+					</div>
+	</body>
+</html>

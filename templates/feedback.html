@@ -1,0 +1,117 @@
+<!DOCTYPE HTML>
+{% load static %}
+<html>
+	<head>
+		<title>База безопасников</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="{% static 'assets/css/main.css' %}" />
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+		<script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+	  <script src='https://api.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.js'></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	</head>
+	<body>
+		<nav class="navbar navbar-expand-xl navbar-light bg-dark sticky-top border-bottom shadow-sm">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-toggle="collapse"
+      data-target="#navbarResponsive">
+        <span class="navbar-toggler-icon">
+          <i class="fas fa-bars" style="color:#fff; font-size:28px;"></i>
+        </span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+
+        <ul class="navbar-nav mr-auto">
+
+          <li class="nav-item active">
+            <a href="{% url 'landing' %}" class="nav-link text-center text-white">Главная</a>
+          </li>
+          <li class="nav-item active">
+            <a href="{% url 'news' %}" class="nav-link text-center text-white">Новости</a>
+          </li>
+					<li class="nav-item active text-center">
+						<div class="sidebar">
+							<div class="dropdown show">
+							<a class="btn btn-secondary dropdown-toggle bg-dark border-0" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="margin-top :2px">Образование</a>
+
+							<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+								<a class="dropdown-item" href="#">Высшее образование</a>
+								<a class="dropdown-item" href="#">Дополнительное образование</a>
+
+							</div>
+							</div>
+						</div>
+			</li>
+				<li class="nav-item active">
+					<a href="{% url 'events' %}" class="nav-link text-center text-white">Мероприятия</a>
+				</li>
+					<li class="nav-item active">
+            <a href="{% url 'search' %}" class="nav-link text-center text-white">Вакансии</a>
+          </li>
+					<li class="nav-item active">
+            <a href="{% url 'projects' %}" class="nav-link text-center text-white">Наши проекты</a>
+          </li>
+					<li class="nav-item active">
+            <a href="{% url 'feedback' %}" class="nav-link text-center text-white">Обратная связь</a>
+          </li>
+
+
+        </ul>
+      </div>
+    </nav>
+		<!-- Обратная связь -->
+			<footer id="footer" class="wrapper">
+				<div class="inner">
+					<section>
+						<div class="box">
+							<div class="content">
+								<h2 class="align-center">Свяжитесь с нами</h2>
+								<hr />
+								<form action="#" method="post">
+									<div class="field half first">
+										<label for="email">Имя</label>
+										{% csrf_token %}
+		                        {{ form.Имя }}
+									</div>
+									<div class="field half">
+										<label for="email">Электронная почта</label>
+										{% csrf_token %}
+		                        {{ form.Электронная_почта }}
+									</div>
+									<div class="field">
+										<label for="dept">Тема</label>
+										<div class="select-wrapper">
+											{% csrf_token %}
+			                        {{ form.Тема }}
+										</div>
+									</div>
+									<div class="field">
+										<label for="message">Сообщение</label>
+										{% csrf_token %}
+														{{ form.Сообщение }}
+									</div>
+									<ul class="actions align-center">
+										<li><input value="Отправить" class="button special" type="submit"></li>
+									</ul>
+								</form>
+							</div>
+						</div>
+					</section>
+
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+		<script src="{% static 'assets/js/jquery.min.js' %}"></script>
+		<script src="{% static 'assets/js/jquery.scrolly.min.js' %}"></script>
+		<script src="{% static 'assets/js/jquery.scrollex.min.js' %}"></script>
+		<script src="{% static 'assets/js/skel.min.js' %}"></script>
+		<script src="{% static 'assets/js/util.js' %}"></script>
+		<script src="{% static 'assets/js/main.js' %}"></script>
+
+	</body>
+</html>

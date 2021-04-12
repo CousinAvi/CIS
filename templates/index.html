@@ -1,0 +1,219 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+			<section id="banner" data-video="{% static 'images/vid4' %}">
+				<div class="inner">
+					<h1>Центр информационной безопасности&nbsp;</h1>
+					<p>Мы готовим кадры для вас.</p>
+					<a href="#one" class="button btn btn-outline-dark scrolly text-white">Подробнее</a>
+				</div>
+			</section>
+
+		<!-- Описание -->
+			<section id="one" class="wrapper style2">
+				<div class="inner">
+					<div class="container">
+						<div class="row">
+							<div class="col-12 col-sm-12 col-md-12 col-lg-11 col-xl-12">
+
+								<!-- Card -->
+								<div class="mb-4" href="{% url '' %}">
+
+									<!-- Image -->
+									<img class="img-fluid" src="{% static 'images/pic5.jpg' %}" alt="...">
+							</div>
+							</div>
+
+							<div class="col-12 col-sm-12 col-md-12 col-lg-11 col-xl-12">
+
+								<h4>Центр информационной безопасности ДВФУ</h4>
+								<p>Лекции. Курсы. Повышения квалификации. Разработка ПО.</p>
+								<p> Основан в 2019 году на базе Дальневосточного федерального университета. The BEST of the BEST </p>
+								<p>Тут описание поиска резюме и приемщества перед hh или фарпостом, поиск по образовательным компетенциям.</p>
+
+							</div>
+					</div>
+				</div>
+			</div>
+			</section>
+<!-- Описание вакансий -->
+<div class="container mt-4">
+<h4 class="mb-4">Новости</h4>
+<div class="row">
+	<div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-4">
+
+		<!-- Card -->
+		<a class="card border-0 mb-4" href="{% url 'feedback' %}">
+
+			<!-- Image -->
+			<img class="card-img-top" src="{% static 'images/bg.jpg' %}" alt="...">
+
+
+
+			<!-- Body -->
+			<div class="card-body">
+	    <h6 class="card-title text-dark"><span class="colortext-green text-white">ЦИБ ДВФУ</span></h6>
+	    <p class="card-text text-dark">Создание центра</p>
+  	</div>
+
+
+	</a>
+	</div>
+
+	<div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-4">
+
+		<!-- Card -->
+		<a class="card border-0 mb-4" href="{% url 'news_first' %}">
+
+			<!-- Image -->
+			<img class="card-img-top " src="{% static 'images/it.jpg' %}" alt="...">
+
+
+
+			<!-- Body -->
+			<div class="card-body">
+	    <h6 class="card-title text-dark"><span class="colortext-red text-white">ФОРУМ</span>27 апреля 2019</h6>
+	    <p class="card-text text-dark">Студенты ДВФУ одержали победу</p>
+  	</div>
+
+
+	</a>
+	</div>
+
+	<div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-4">
+
+		<!-- Card -->
+		<a class="card border-0 mb-4" href="{% url '' %}">
+
+			<!-- Image -->
+			<img class="card-img-top " src="{% static 'images/it4.jpg' %}" alt="...">
+
+
+
+			<!-- Body -->
+			<div class="card-body">
+	    <h6 class="card-title text-dark"><span class="colortext-blue text-white">CTF</span>27 апреля 2019</h6>
+	    <p class="card-text text-dark">Соревнования RDG</p>
+  	</div>
+
+
+	</a>
+	</div>
+	<div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-4" id="news">
+
+		<!-- Card -->
+		<a class="card border-0 mb-4" href="{% url '' %}">
+
+			<!-- Image -->
+			<img class="card-img-top " src="{% static 'images/it.jpg' %}" alt="...">
+
+
+
+			<!-- Body -->
+			<div class="card-body">
+	    <h6 class="card-title text-dark"><span class="colortext-violet text-white">ОБУЧЕНИЕ</span></h6>
+	    <p class="card-text text-dark">Открывается новое направление магистратуры</p>
+  	</div>
+
+
+	</a>
+	</div>
+</div>
+<h4 class="mb-4">Мероприятия</h4>
+<div class="row">
+	<div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-4">
+
+		<!-- Card -->
+		<a class="card border-0 mb-4" href="{% url '' %}">
+
+			<!-- Image -->
+			<img class="card-img-top " src="{% static 'images/it5.jpeg' %}" alt="...">
+
+
+
+			<!-- Body -->
+			<div class="card-body">
+	    <h6 class="card-title text-dark"><span class="colortext-blue text-white">ХАКАТОН</span></h6>
+	    <p class="card-text text-dark">Провели соревнование</p>
+  	</div>
+
+
+	</a>
+	</div>
+
+	<div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-4">
+
+		<!-- Card -->
+		<a class="card border-0 mb-4" href="{% url '' %}">
+
+			<!-- Image -->
+			<img class="card-img-top " src="{% static 'images/it.jpg' %}" alt="...">
+
+
+
+			<!-- Body -->
+			<div class="card-body">
+	    <h6 class="card-title text-dark"><span class="colortext-yellow text-white">УЧЕБА</span></h6>
+	    <p class="card-text text-dark">Лекции от CISCO академии</p>
+  	</div>
+
+
+	</a>
+	</div>
+	<div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-4">
+
+		<!-- Card -->
+		<a class="card border-0 mb-4" href="{% url '' %}">
+
+			<!-- Image -->
+			<img class="card-img-top " src="{% static 'images/it.jpg' %}" alt="...">
+
+
+
+			<!-- Body -->
+			<div class="card-body">
+	    <h6 class="card-title text-dark"><span class="colortext-violet text-white">УЧЕБА</span></h6>
+	    <p class="card-text text-dark">Работа со школами</p>
+  	</div>
+
+
+	</a>
+	</div>
+	<div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-4" id="news">
+
+		<!-- Card -->
+		<a class="card border-0 mb-4" href="{% url '' %}">
+
+			<!-- Image -->
+			<img class="card-img-top " src="{% static 'images/it.jpg' %}" alt="...">
+
+
+
+			<!-- Body -->
+			<div class="card-body">
+	    <h6 class="card-title text-dark"><span class="colortext-red text-white">РАБОТА</span></h6>
+	    <p class="card-text text-dark">Стажировка в ЦИБ ДВФУ</p>
+  	</div>
+
+
+	</a>
+	</div>
+
+</div>
+</div>
+
+<footer class="container-fluid pt-4 my-md-5 pt-md-5 border-top col-10 col-sm-10 col-md-0 col-lg-10 col-xl-4">
+				<div class="container-fluid">
+					<div class="row padding text-center">
+
+						<div class="col-12 social padding">
+							<a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+							<a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+							<a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
+							<a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
+							<a href="#" target="_blank"><i class="fab fa-google-plus-g"></i></a>
+						</div>
+					</div>
+				</div>
+			</footer>
+{% endblock %}
